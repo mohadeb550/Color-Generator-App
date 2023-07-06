@@ -2,7 +2,7 @@
 let toastContainer = null;
 
 let allColorBox = document.querySelector(`.all-color-box`);
-let copySound = new Audio(`copy-sound.mp3`);
+let copySound = new Audio(`assets/copy-sound.mp3`);
 
 let saveToCustomBtn = document.getElementById(`save-to-custom`);
 let allCustomBox = document.querySelector(`.all-custom-box`);
