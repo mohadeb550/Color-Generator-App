@@ -1,0 +1,381 @@
+/* body{
+    background-color: rgb(0, 0, 0);
+}
+
+h2{
+    font-family:verdana;
+    color:rgb(225, 225, 225);
+}
+.btn1 {
+    background-color: black;
+    color:white;
+    border:1px solid rgb(204, 0, 0);
+    padding:9px 15px;
+    margin-top:10px;
+    border-top-left-radius: 20px;
+}
+button:hover{
+    border-color:rgb(32, 117, 17);
+}
+.mainDiv{
+    margin:300px auto;
+    width:60%;
+    text-align: center;
+}
+
+.input1 {
+    outline:none;
+    padding:4px 1px;
+    border:none;
+    border-top-right-radius:2px;
+    border-bottom-right-radius: 2px;
+}
+.subDiv .btn2{
+    background-color:rgba(235, 235, 235, 0.9);
+    color:rgb(70, 70, 70);
+    font-weight: bold;
+    padding:4px 7px;
+    outline:none;
+    border-radius:3px;
+    border:none;
+    transition: 0.1s ease;
+}
+.subDiv .btn2:hover{
+    background-color: rgb(238, 238, 238);;
+}
+
+
+
+
+.subDiv{
+
+    position:relative;
+    width: 220px;
+    margin:auto;
+}
+.input2{
+    
+    outline:none;
+    padding:4px 0px;
+    padding-left:7px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border:none;
+    width: 8px;
+    background-color: white;
+    color:rgb(81, 81, 81);
+    position:absolute;
+    left:-11px;
+
+}
+.mainDiv .hex{
+    color:rgb(255, 204, 0);
+    font-family: verdana;
+}
+.show{
+    background-color: rgb(234, 234, 234);
+} */
+
+
+
+/* New Refactoring User Interface start */
+
+body{
+    background-color: rgb(203, 219, 233);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    background-color: rgb(241, 241, 241);
+    color:rgb(84, 84, 84);
+    width:600px;
+    margin:30px auto;
+    padding:25px;
+    border-radius: 3px;
+    position:relative;
+}
+.first-section{
+    display:flex;
+    flex-direction: column;
+}
+.first-section .dis-ran{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid rgb(228, 225, 225);
+    cursor:pointer;
+}
+.first-section .dis-ran .ran{
+    color:rgb(230, 142, 10);
+    border:1px solid rgb(215, 215, 215);
+    border-radius: 3px;
+    height: 23px;
+    cursor:pointer;
+}
+.first-section .display{
+    background-color: rgb(165, 205, 222);
+    width:600px;
+    height: 115px;
+    border-radius: 3px;
+    margin:15px 0;
+}
+.second-section {
+    display:flex;
+    flex-direction: column;
+}
+.second-section .copy-color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.second-section .copy-color .pc{
+    color:rgb(54, 155, 17);
+    border:1px solid rgb(215, 215, 215);
+    border-radius: 3px;
+    height: 25px;
+    cursor:pointer;
+}
+.second-section .mode{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 226, 198);
+    border-radius: 3px;
+}
+.second-section .field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+
+}
+.second-section .field input{
+    width:260px;
+    height: 20px;
+    outline:none;
+    padding:4px 15px;
+    border:1px solid rgb(156, 156, 156);
+    border-radius: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.second-section .field .fst{
+    position:relative;
+}
+.second-section .field .hash{
+    width:9px;
+    padding:4px 0;
+    position:absolute;
+    top:52px;
+    left:7px;
+    border:none;
+    background-color: white;
+}
+.second-section .adjust{
+    display:flex;
+    flex-direction: column;
+}
+.second-section .adjust .rgb{
+    display:flex;
+    justify-content: space-between;
+}
+.second-section .adjust .color{
+    display: flex;
+    justify-content:space-between;
+    width:185px;
+    height: 45px;
+    border-radius: 2px;
+    background-color: rgb(210, 212, 240);
+}
+.second-section .adjust .slider{
+    display: flex;
+    justify-content: space-between;
+}
+.second-section .adjust .slider .sli{
+    width:184px;
+    height: 4px;
+    margin-top:8px;
+    outline:none;
+}
+
+.second-section .mode label{
+    user-select:none;
+}
+
+.divC {
+    width:200px;
+    color:rgb(18, 156, 0);
+    background:transparent;
+    position:absolute;
+    top:35px;
+    left:34%;
+    font-weight: 600;
+    text-align:center;
+    padding:3px 10px;
+    font-family: monospace;
+    border:1px solid rgb(24, 162, 0);
+    border-radius: 3px;
+    cursor:pointer;
+
+}
+
+.slide-in{
+    animation: myMoveIn 0.3s linear;
+}
+@keyframes myMoveIn {
+    from{transform: translateY(-50px); opacity:0;}
+    to {transform:translateY(0px);opacity:1;}
+}
+
+.slide-out{
+    animation:myMoveOut 0.3s linear;
+}
+@keyframes myMoveOut {
+    form{transform:translateY(0px); opacity:1;}
+    to {transform:translateY(-50px); opacity:0;}
+}
+
+/* NEW COLOR PRESET SECTION */
+
+.preset-section .heading{
+   
+    border-bottom:1px solid rgb(182, 182, 182);
+}
+
+.preset-section .heading .title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:5px;
+    font-weight: 500;
+}
+.preset-section .all-color-box{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    gap:12px;
+    margin-top:10px;
+}
+.preset-section .color-box{
+    width:75px;
+    height: 30px;
+    cursor:pointer;
+}
+
+.container .second-section .ex{
+    margin-left:268px;
+    color:rgb(66, 167, 26);
+    border-color:rgb(198, 217, 197);
+}
+
+/* CUSTOM SECTION */
+.custom-section{
+    position:relative;
+}
+
+.custom-section .heading{
+   
+    border-bottom:1px solid rgb(182, 182, 182);
+}
+
+.custom-section .heading .title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:5px;
+    font-weight: 500;
+}
+.custom-section .all-custom-box{
+
+    width:80%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    gap:12px;
+    margin-top:10px;
+}
+.custom-section .color-box{
+    width:75px;
+    height: 30px;
+    cursor:pointer;
+    background-color: rgb(165, 205, 222);
+}
+
+
+
+.background-preferences .heading h3{
+    border-bottom:1px solid rgb(188, 188, 188);
+    color:rgb(97, 97, 97);
+    padding-bottom:10px;
+}
+.background-preferences .display{
+    height: 180px;
+    width:310px;
+    background-color: rgb(222, 210, 230);
+    background-size:100%;
+}
+.background-preferences .option{
+    margin-top:12px;
+}
+.background-preferences .option button{
+    border:none;
+    background-color: rgb(222, 222, 222);
+    padding:7px 13px;
+    border-radius:2px;
+    outline:none;
+}
+.background-preferences .option button:hover{
+    background-color: rgb(213, 212, 212);
+}
+.background-preferences .second-box h4{
+    color:green;
+}
+.background-preferences .option input{
+    display:none;
+}
+.background-preferences .second-box{
+    display:flex;
+    justify-content: space-between;
+}
+.background-preferences .controller-part{
+    width:270px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.background-preferences .controller-part select{
+    width:200px;
+    padding:5px;
+    color:rgb(101, 101, 101);
+    outline:none;
+    border-color:rgb(176, 176, 176);
+    border-radius:3px;
+    margin-bottom:12px;
+    margin-top:5px;
+}
+.background-preferences .controller-part{
+    pointer-events: none;
+    opacity: 0.5;
+    
+}
+.background-preferences .second-box #bg-file-delete-btn{
+    opacity: 0.4;
+    pointer-events:none;
+    user-select: none;
+}
+.color-box:hover{
+    opacity: 0.9;
+    box-shadow: 1px 1px 3px black;
+
+}
+.custom-section .remove-btn{
+    position:absolute;
+    top:48px;
+    right:83px;
+    width:30px;
+    cursor: pointer;
+}
+.custom-section .remove-btn:hover{
+    opacity: 0.8;
+}
+.date .heading{
+    color:blue;
+    font-weight:600;
+}

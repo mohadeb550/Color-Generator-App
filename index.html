@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stack.css">
+</head>
+<body>
+<!--     
+    <div class="mainDiv">
+        <h2> Change The Background Color By Clicking Following Button</h2>
+
+       <div class="subDiv">
+        
+        <h4 class="hex"> Hexadecimal Code</h4>
+        <input value="#" class="input2" disabled>
+    <input type="text" class="input1" value="000000"> 
+        <button title="copy to clipboard" class="btn2"> copy</button>
+        <h4 class="hex"> RGB Color</h4>
+
+        <input type="text" class="input1 show" value="rgb(0,0,0)" disabled ><button class="btn2 btnTwo">copy</button>
+    </div>
+        <button class="btn1"> CHANGE COLOR</button>
+    </div>
+    -->
+   
+<!-- NEW REFACTORING UI START  -->
+
+<div class="rule"> 
+    <ul>
+        <li>Click the "Random button" to get different colors.</li>
+        <li>Select "copy mode" & copy your color</li>
+        <li>Click on the "Save button" to favourite your color</li>
+        <li>Delete the custom color click on "Delete Icon"</li>
+        <li>Give any valid "Hexadecimal color" in Hex input field</li>
+        <li>Turn the "slider" to create a color</li>
+        <li>Click "preset color box" to copy the color</li>
+        <li>Upload any background image & control</li>
+    </ul>
+</div>
+
+
+<section class="container">
+
+    <section class="first-section">
+
+        <div class="dis-ran">
+            <p>Display Color</p>
+        <button class="ran"> Random Color</button>
+        </div>
+
+        <div class="display" id="color-display"> </div>
+        
+    </section>
+    
+    <section class="second-section">
+
+        <div class="copy-color">
+            <p>Change & Copy Color</p>
+
+        <button class="pc ex" id="save-to-custom"> Save</button>
+        <button class="pc" id="copy-to-clipboard">Copy To Clipboard</button>
+        </div>
+
+        <div class="mode">
+            <p>Select Copy Mode</p>
+            <div>
+                <input type="radio" id="hex-radio" value="hex" name="color-mode" checked>
+                <label for="hex-radio">Hex</label>
+                <input type="radio" id="rgb-radio" value="rgb" name="color-mode">
+                <label for="rgb-radio">RGB</label>
+            </div>
+        </div>
+
+        <div class="field">
+
+            <div class="fst">
+                <input type="text" value="#" class="hash" disabled>
+                <p>Hex</p>
+                <input type="text" id="input-hex" placeholder="ff0000">
+            </div>
+            <div>
+                <p>RGB</p>
+                <input type="text"
+                
+                id="input-rgb" placeholder="rgb(0,0,0)">
+
+            </div>
+        </div>
+
+        <div class="adjust">
+
+            <h5>Adjust RGB Colors</h5>
+
+        <div class="rgb"> 
+            <div class="color"> 
+                <p>Red</p>
+                <p id="red-label">130</p>
+            </div>
+            <div class="color">
+                <p>Green</p>
+                <p id="green-label">130</p>
+            </div>
+            <div class="color">
+                <p>Blue</p>
+                <p id="blue-label">130</p>
+            </div>
+            
+         </div> 
+         <div class="slider">
+            <input type="range" min="0" max="255" value="130" id="slider-red" class="sli">
+
+            <input type="range" min="0" max="255" value="130" id="slider-green" class="sli">
+
+            <input type="range" min="0" max="255" value="130" id="slider-blue" class="sli">
+         </div>
+    </div>
+
+    </section>
+
+
+
+
+
+    <section class="preset-section">
+
+        <div class="heading">
+            <h3 class="title"> Preset Colors</h3>
+        </div>
+
+        <div class="divider"> </div>
+
+    <div class="all-color-box"> 
+            
+    </div>
+    </section>
+
+
+
+
+
+
+    <section 
+    class="custom-section">
+
+        <div class="heading">
+            <h3 class="title"> Custom Colors</h3>
+        </div>
+
+        <div class="divider"> </div>
+
+    <div class="all-custom-box"> </div>
+        <img src="delete.png" class="remove-btn" id="remove-btn">
+    
+</section>
+
+
+
+
+
+
+<section class="background-preferences">
+    <div class="heading"> 
+        <h3> Background Preferences</h3>
+    </div>
+
+    <div class="second-box">
+        <div class="display-part">
+
+            <h4> Background Preview</h4>
+        <div class="display" id="img-display"> </div>
+
+        <div class="option">
+            <input type="file" id="bg-file-input" accept="image/*">
+            <button id="bg-file-input-btn"> Upload</button>
+            <button id="bg-file-delete-btn"> Delete</button>
+        </div>
+        </div>  
+        
+        <div class="controller-part">
+
+            <div class="background-size">
+                <label>Background Size</label><br>
+                <select id="bg-size">
+                    <option value="auto">Auto</option>
+                    <option  value="inherit">Inherit</option>
+                    <option value="contain">Contain</option>
+                    <option value="cover">Cover</option>
+                </select>
+            </div>
+
+            <div class="background-repeat">
+                <label>Background Repeat</label><br>
+                <select id="bg-repeat">
+                    <option value="repeat">Repeat</option>
+                    <option value="no-repeat">No Repeat</option>
+                </select>
+            </div>
+
+            <div class="background-position">
+                <label>Background Position</label><br>
+                <select id="bg-position">
+                    <option value="left-top">Left top</option>
+                    <option value="left-center">Left center</option>
+                    <option value="left-bottom">Left bottom</option>
+                    <option value="right-top">Right top</option>
+                    <option value="right-center">Right center</option>
+                    <option value="right-bottom">Right bottom</option>
+                    <option value="center-top">Center top</option>
+                    <option value="center-center">Center center</option>
+                    <option value="center-bottom">Center bottom</option>
+                </select>
+            </div>
+
+            <div class="background-attachment">
+                <label>Background Attachment</label><br>
+                <select id="bg-attachment">
+                    <option value="initial">Initial</option>
+                    <option value="inherit">Inherit</option>
+                    <option value="local">Local</option>
+                    <option value="fixed">Fixed</option>
+                    <option value="scroll">Scroll</option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+</section>
+
+<div class="date"><p class="heading"> My First Project Javascript (Mohadeb)</p>
+    <p>Date: June 2 2023.</p></div>
+
+    <script src="stack.js"> </script>
+</body>
+</html>
